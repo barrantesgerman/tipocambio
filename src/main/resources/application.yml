@@ -1,3 +1,7 @@
 micronaut:
   application:
     name: tipocambio
+bccr:
+  nombre: Herman Barrantes
+  correo: herman.barrantes@gbsys.com
+  token: SY0BHBR9BM

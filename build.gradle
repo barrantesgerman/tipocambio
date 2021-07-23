@@ -36,7 +36,7 @@ dependencies {
 
 
 application {
-    mainClass.set("org.habv.BookLambdaRuntime")
+    mainClass.set("org.habv.TipoCambioLambdaRuntime")
 }
 java {
     sourceCompatibility = JavaVersion.toVersion("11")

@@ -20,7 +20,7 @@ This will build the GraalVM native image inside a docker container and generate 
 
 [AWS Lambda Handler](https://docs.aws.amazon.com/lambda/latest/dg/java-handler.html)
 
-Handler: org.habv.BookRequestHandler
+Handler: org.habv.TipoCambioRequestHandler
 
 ## Feature http-client documentation
 
