@@ -1,7 +1,11 @@
 micronaut:
   application:
     name: tipocambio
+jackson:
+  serialization:
+    writeDatesAsTimestamps: false
 bccr:
-  nombre: Herman Barrantes
-  correo: herman.barrantes@gbsys.com
-  token: SY0BHBR9BM
+  url: ${BCCR_URL:`https://gee.bccr.fi.cr/Indicadores/Suscripciones/WS/wsindicadoreseconomicos.asmx`}
+  token: ${BCCR_TOKEN:tokenvalue}
+  nombre: ${BCCR_NOMBRE:username}
+  correo: ${BCCR_CORREO:username@example.com}

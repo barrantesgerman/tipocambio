@@ -1,17 +1,20 @@
-package org.habv;
+package com.mihtan;
 
+import io.micronaut.core.convert.format.Format;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.QueryValue;
 import io.micronaut.http.client.annotation.Client;
 
-@Client(BccrConfig.API_URL)
+import java.time.LocalDate;
+
+@Client("${bccr.url}")
 public interface TipoCambioClient {
 
     @Get("/ObtenerIndicadoresEconomicosXML")
     public String obtenerIndicadorEconomico(
-            @QueryValue("Indicador") String indicador,
-            @QueryValue("FechaInicio") String fechaInicio,
-            @QueryValue("FechaFinal") String fechaFinal,
+            @QueryValue("Indicador") Integer indicador,
+            @QueryValue("FechaInicio") @Format("dd/MM/yyyy") LocalDate fechaInicio,
+            @QueryValue("FechaFinal")  @Format("dd/MM/yyyy") LocalDate fechaFinal,
             @QueryValue("Nombre") String nombre,
             @QueryValue("SubNiveles") String subNivel,
             @QueryValue("CorreoElectronico") String correo,
